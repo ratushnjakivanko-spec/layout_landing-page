@@ -410,6 +410,21 @@ body {
   margin-bottom: 48px;
 }
 
+// ── FOOTER PHOTO ───────────────────────────────────────
+.footer-photo {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    filter: brightness(0.6);
+  }
+}
+
 // ── ABOUT ──────────────────────────────────────────────
 .about {
   &__grid {
@@ -442,14 +457,14 @@ body {
     aspect-ratio: 4 / 3;
     overflow: hidden;
 
-    img {
+    // Більш конкретний селектор — вирішує проблему з no-descending-specificity
+    & img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.6s ease;
     }
 
-    /* stylelint-disable-next-line no-descending-specificity */
     &:hover img {
       transform: scale(1.04);
     }
@@ -698,21 +713,6 @@ body {
     font-size: 15px;
     color: $text-muted;
     line-height: 1.5;
-  }
-}
-
-// ── FOOTER PHOTO ───────────────────────────────────────
-.footer-photo {
-  width: 100%;
-  height: 320px;
-  overflow: hidden;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 40%;
-    filter: brightness(0.6);
   }
 }
 
