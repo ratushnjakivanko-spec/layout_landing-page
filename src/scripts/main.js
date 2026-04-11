@@ -35,3 +35,11 @@ menuOverlay.addEventListener('click', closeMenu);
 document.querySelectorAll('.menu-link').forEach((link) => {
   link.addEventListener('click', closeMenu);
 });
+
+// Form: clear inputs after submit
+const form = document.querySelector('.form');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  form.reset();
+});
