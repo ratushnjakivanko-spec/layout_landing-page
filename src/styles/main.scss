@@ -1,19 +1,19 @@
 @use 'sass:math';
 
 // ── VARIABLES ──────────────────────────────────────────
-$bg: #0e0e0e;
-$bg-alt: #161616;
-$surface: #1c1c1c;
-$border: rgba(255, 255, 255, 0.08);
-$text: #f0ede8;
-$text-muted: rgba(240, 237, 232, 0.5);
-$accent: #c8b89a;
+$bg:           #0e0e0e;
+$bg-alt:       #161616;
+$surface:      #1c1c1c;
+$border:       rgba(255, 255, 255, 0.08);
+$text:         #f0ede8;
+$text-muted:   rgba(240, 237, 232, 0.5);
+$accent:       #c8b89a;
 $font-display: 'Bebas Neue', sans-serif;
-$font-cond: 'Barlow Condensed', sans-serif;
-$font-body: 'Barlow', sans-serif;
-$max-w: 1260px;
-$margin: 120px;
-$gutter: 24px;
+$font-cond:    'Barlow Condensed', sans-serif;
+$font-body:    'Barlow', sans-serif;
+$max-w:        1260px;
+$margin:       120px;
+$gutter:       24px;
 
 // ── RESET ──────────────────────────────────────────────
 *,
@@ -26,21 +26,13 @@ $gutter: 24px;
 
 // ── KEYFRAMES ──────────────────────────────────────────
 @keyframes hero-zoom {
-  to {
-    transform: scale(1);
-  }
+  from { transform: scale(1.04); }
+  to   { transform: scale(1); }
 }
 
 @keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(32px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 // ── BASE ───────────────────────────────────────────────
@@ -63,21 +55,15 @@ body {
   margin: 0 auto;
   padding: 0 $margin;
 
-  @media (max-width: 744px) {
-    padding: 0 72px;
-  }
-
-  @media (max-width: 480px) {
-    padding: 0 20px;
-  }
+  @media (max-width: 1024px) { padding: 0 60px; }
+  @media (max-width: 744px)  { padding: 0 40px; }
+  @media (max-width: 480px)  { padding: 0 20px; }
 }
 
 // ── HEADER ─────────────────────────────────────────────
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   z-index: 100;
   background: rgba(14, 14, 14, 0.92);
   backdrop-filter: blur(12px);
@@ -92,13 +78,9 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: 744px) {
-      padding: 0 72px;
-    }
-
-    @media (max-width: 480px) {
-      padding: 0 20px;
-    }
+    @media (max-width: 1024px) { padding: 0 60px; }
+    @media (max-width: 744px)  { padding: 0 40px; }
+    @media (max-width: 480px)  { padding: 0 20px; }
   }
 
   &__right {
@@ -115,13 +97,9 @@ body {
     text-decoration: none;
     transition: color 0.2s;
 
-    &:hover {
-      color: $text;
-    }
+    &:hover { color: $text; }
 
-    @media (max-width: 600px) {
-      display: none;
-    }
+    @media (max-width: 600px) { display: none; }
   }
 
   &__icons {
@@ -132,16 +110,16 @@ body {
 }
 
 // ── LOGO ───────────────────────────────────────────────
+// FIX 3: white-space: nowrap prevents "MyBi KE" split
 .logo {
   font-family: $font-display;
   font-size: 26px;
   letter-spacing: 0.04em;
   color: $text;
   text-decoration: none;
+  white-space: nowrap;
 
-  span {
-    color: $accent;
-  }
+  span { color: $accent; }
 }
 
 // ── ICON BUTTON ────────────────────────────────────────
@@ -156,14 +134,9 @@ body {
   opacity: 0.7;
   transition: opacity 0.2s;
 
-  &:hover {
-    opacity: 1;
-  }
+  &:hover { opacity: 1; }
 
-  svg {
-    width: 20px;
-    height: 20px;
-  }
+  svg { width: 20px; height: 20px; }
 }
 
 // ── HAMBURGER ──────────────────────────────────────────
@@ -181,23 +154,13 @@ body {
     width: 22px;
     height: 1.5px;
     background: $text;
-    transition:
-      transform 0.3s,
-      opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
   }
 
   &.open {
-    span:nth-child(1) {
-      transform: translateY(6.5px) rotate(45deg);
-    }
-
-    span:nth-child(2) {
-      opacity: 0;
-    }
-
-    span:nth-child(3) {
-      transform: translateY(-6.5px) rotate(-45deg);
-    }
+    span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    span:nth-child(2) { opacity: 0; }
+    span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
   }
 }
 
@@ -220,8 +183,7 @@ body {
 // ── MENU PANEL ─────────────────────────────────────────
 .menu-panel {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 0; right: 0;
   width: min(400px, 100vw);
   height: 100vh;
   z-index: 95;
@@ -233,9 +195,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  &.open {
-    transform: translateX(0);
-  }
+  &.open { transform: translateX(0); }
 
   &__top {
     display: flex;
@@ -277,9 +237,7 @@ body {
     text-decoration: none;
     transition: color 0.2s;
 
-    &:hover {
-      color: #111;
-    }
+    &:hover { color: #111; }
   }
 
   &__cta {
@@ -314,9 +272,7 @@ body {
     padding: 6px 0;
     transition: color 0.2s;
 
-    &:hover {
-      color: #555;
-    }
+    &:hover { color: #555; }
   }
 }
 
@@ -343,15 +299,13 @@ body {
 
   &__gradient {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 0; left: 0; right: 0;
     height: 70%;
     background: linear-gradient(
       to top,
-      rgba(10, 10, 10, 1) 0%,
+      rgba(10, 10, 10, 1)   0%,
       rgba(10, 10, 10, 0.4) 60%,
-      transparent 100%
+      transparent           100%
     );
   }
 
@@ -374,9 +328,7 @@ body {
       color: $accent;
     }
 
-    @media (max-width: 600px) {
-      font-size: 52px;
-    }
+    @media (max-width: 600px) { font-size: 52px; }
   }
 }
 
@@ -384,13 +336,9 @@ body {
 .section {
   padding: 100px 0;
 
-  &--dark {
-    background: $bg-alt;
-  }
+  &--dark { background: $bg-alt; }
 
-  @media (max-width: 600px) {
-    padding: 64px 0;
-  }
+  @media (max-width: 600px) { padding: 64px 0; }
 }
 
 .section-label {
@@ -410,21 +358,6 @@ body {
   margin-bottom: 48px;
 }
 
-// ── FOOTER PHOTO ───────────────────────────────────────
-.footer-photo {
-  width: 100%;
-  height: 320px;
-  overflow: hidden;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 40%;
-    filter: brightness(0.6);
-  }
-}
-
 // ── ABOUT ──────────────────────────────────────────────
 .about {
   &__grid {
@@ -433,9 +366,7 @@ body {
     gap: 80px;
     align-items: center;
 
-    @media (max-width: 900px) {
-      grid-template-columns: 1fr;
-    }
+    @media (max-width: 900px) { grid-template-columns: 1fr; }
   }
 
   &__heading {
@@ -457,7 +388,6 @@ body {
     aspect-ratio: 4 / 3;
     overflow: hidden;
 
-    // Більш конкретний селектор — вирішує проблему з no-descending-specificity
     & img {
       width: 100%;
       height: 100%;
@@ -465,9 +395,7 @@ body {
       transition: transform 0.6s ease;
     }
 
-    &:hover img {
-      transform: scale(1.04);
-    }
+    &:hover img { transform: scale(1.04); }
   }
 }
 
@@ -478,13 +406,8 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: $gutter;
 
-    @media (max-width: 900px) {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @media (max-width: 600px) {
-      grid-template-columns: 1fr;
-    }
+    @media (max-width: 900px) { grid-template-columns: 1fr 1fr; }
+    @media (max-width: 600px) { grid-template-columns: 1fr; }
   }
 }
 
@@ -492,9 +415,7 @@ body {
   background: $surface;
   padding: 32px 24px 28px;
   border: 1px solid $border;
-  transition:
-    border-color 0.3s,
-    transform 0.3s;
+  transition: border-color 0.3s, transform 0.3s;
   cursor: pointer;
 
   &:hover {
@@ -509,9 +430,7 @@ body {
     margin-bottom: 24px;
     transition: filter 0.3s;
 
-    .bike-card:hover & {
-      filter: brightness(1.1);
-    }
+    .bike-card:hover & { filter: brightness(1.1); }
   }
 
   &__name {
@@ -549,9 +468,7 @@ body {
   &--reverse {
     direction: rtl;
 
-    > * {
-      direction: ltr;
-    }
+    > * { direction: ltr; }
   }
 
   &__images {
@@ -591,9 +508,7 @@ body {
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
 
-    &--reverse {
-      direction: ltr;
-    }
+    &--reverse { direction: ltr; }
   }
 }
 
@@ -613,9 +528,7 @@ body {
   color: $text;
   background: transparent;
   cursor: pointer;
-  transition:
-    background 0.25s,
-    color 0.25s;
+  transition: background 0.25s, color 0.25s;
 
   &:hover {
     background: $text;
@@ -629,12 +542,10 @@ body {
   flex-direction: column;
   gap: 12px;
 
-  // Специфічний стиль для textarea
   &__textarea {
     min-height: 100px;
   }
 
-  // Спільні стилі для input та textarea
   &__input,
   &__textarea {
     width: 100%;
@@ -649,12 +560,18 @@ body {
     resize: none;
     transition: border-color 0.2s;
 
-    &::placeholder {
-      color: $text-muted;
-    }
+    &::placeholder { color: $text-muted; }
+    &:focus { border-color: $accent; }
 
-    &:focus {
-      border-color: $accent;
+    // FIX 1: reset browser autofill styles
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0 1000px $bg inset;
+      -webkit-text-fill-color: $text;
+      caret-color: $text;
+      transition: background-color 9999s ease-in-out 0s;
+      border-bottom: 1px solid $accent;
     }
   }
 
@@ -670,9 +587,7 @@ body {
     letter-spacing: 0.18em;
     text-transform: uppercase;
     cursor: pointer;
-    transition:
-      background 0.25s,
-      color 0.25s;
+    transition: background 0.25s, color 0.25s;
 
     &:hover {
       background: $text;
@@ -689,9 +604,7 @@ body {
     gap: 80px;
     align-items: start;
 
-    @media (max-width: 900px) {
-      grid-template-columns: 1fr;
-    }
+    @media (max-width: 900px) { grid-template-columns: 1fr; }
   }
 
   &__info {
@@ -713,6 +626,25 @@ body {
     font-size: 15px;
     color: $text-muted;
     line-height: 1.5;
+    text-decoration: none;
+    display: block;
+
+    &:hover { color: $text; }
+  }
+}
+
+// ── FOOTER PHOTO ───────────────────────────────────────
+.footer-photo {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    filter: brightness(0.6);
   }
 }
 
@@ -730,13 +662,9 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: 744px) {
-      padding: 0 72px;
-    }
-
-    @media (max-width: 480px) {
-      padding: 0 20px;
-    }
+    @media (max-width: 1024px) { padding: 0 60px; }
+    @media (max-width: 744px)  { padding: 0 40px; }
+    @media (max-width: 480px)  { padding: 0 20px; }
   }
 
   &__logo {
