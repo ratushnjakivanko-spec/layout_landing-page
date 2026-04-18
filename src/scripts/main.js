@@ -3,10 +3,10 @@
 import '../styles/main.scss';
 
 // ── MENU ──────────────────────────────────────────────
-const hamburger   = document.getElementById('hamburger');
-const menuPanel   = document.getElementById('menuPanel');
+const hamburger = document.getElementById('hamburger');
+const menuPanel = document.getElementById('menuPanel');
 const menuOverlay = document.getElementById('menuOverlay');
-const menuClose   = document.getElementById('menuClose');
+const menuClose = document.getElementById('menuClose');
 
 function openMenu() {
   hamburger.classList.add('open');
@@ -22,24 +22,33 @@ function closeMenu() {
   document.body.style.overflow = '';
 }
 
+// Hamburger click
 hamburger.addEventListener('click', () => {
-  menuPanel.classList.contains('open') ? closeMenu() : openMenu();
+  if (menuPanel.classList.contains('open')) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
 });
 
 menuClose.addEventListener('click', closeMenu);
 menuOverlay.addEventListener('click', closeMenu);
 
-// FIX: menu links — close panel, then smooth-scroll to section
+// Menu links — close panel + smooth scroll
 document.querySelectorAll('.menu-link').forEach((link) => {
   link.addEventListener('click', (e) => {
     const href = link.getAttribute('href');
+
     if (href && href.startsWith('#')) {
       e.preventDefault();
       closeMenu();
-      // Wait for panel slide-out animation (400ms) before scrolling
+
       setTimeout(() => {
         const target = document.querySelector(href);
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
+
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
       }, 420);
     }
   });
