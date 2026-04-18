@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyBiKE Landing</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="module" crossorigin src="/layout_landing-page/assets/index-C8E4g07M.js"></script>
+    <link rel="stylesheet" crossorigin href="/layout_landing-page/assets/index-Dh1-BzWe.css">
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__inner">
+        <a href="#hero" class="logo">MyBi<span>KE</span></a>
+
+        <div class="header__right">
+          <div class="header__icons">
+            <a href="tel:+12345555555" class="icon-btn icon-btn--phone" aria-label="Call us">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.8 19.8 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.8 19.8 0 01-3.07-8.66A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z" />
+              </svg>
+              <span class="icon-btn__tooltip">+1 234 5555-55-55</span>
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- MENU OVERLAY -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- MENU PANEL -->
+    <div class="menu-panel" id="menuPanel">
+      <div class="menu-panel__top">
+        <span class="menu-panel__logo">MyBiKE</span>
+        <button class="menu-panel__close" id="menuClose">✕</button>
+      </div>
+
+      <nav>
+        <ul class="menu-nav">
+          <li><a href="#hero" class="menu-link">Home</a></li>
+          <li><a href="#about" class="menu-link">About us</a></li>
+          <li><a href="#bikes" class="menu-link">Compare Bikes</a></li>
+          <li><a href="#details" class="menu-link">Details</a></li>
+          <li><a href="#contact" class="menu-link">Contacts</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-panel__footer">
+        <a href="tel:+12345555555" class="menu-panel__contact">
+          +1 234 5555-55-55
+        </a>
+        <a href="#contact" class="menu-panel__cta menu-link">
+          Book a test ride
+        </a>
+      </div>
+    </div>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="hero">
+        <div class="hero__bg"></div>
+        <div class="hero__gradient"></div>
+        <div class="container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Take the<br />
+              <em>Streets</em>
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="about__grid">
+            <div>
+              <p class="section-label">About us</p>
+              <h2 class="about__heading">Move Free</h2>
+              <p class="about__text">
+                Shift your ride, not gears. Find the fastest way to move in the city
+                as the bike adapts intuitively to power the speed you need. Built for
+                those who refuse to stop, MyBiKE is precision engineered for urban dominance.
+              </p>
+            </div>
+            <div class="about__image">
+              <img
+                src="https://images.unsplash.com/photo-1511994298241-608e28f14fde?w=900&q=80&auto=format&fit=crop"
+                alt="Cyclist in the city"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BIKES -->
+      <section class="section section--dark" id="bikes">
+        <div class="container">
+          <p class="section-label">Our lineup</p>
+          <h2 class="section-title">Compare Bikes</h2>
+
+          <div class="bikes__grid">
+            <div class="bike-card">
+              <img
+                src="https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?w=600&q=80&auto=format&fit=crop"
+                alt="Sporty 4"
+                class="bike-card__img"
+              />
+              <div class="bike-card__name">Sporty 4</div>
+              <p class="bike-card__desc">
+                The iconic frame brought to a new performance height as a sporty, active ride.
+              </p>
+              <div class="bike-card__price">$ 2 590</div>
+            </div>
+
+            <div class="bike-card">
+              <img
+                src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600&q=80&auto=format&fit=crop"
+                alt="Ride in town ST"
+                class="bike-card__img"
+              />
+              <div class="bike-card__name">Ride in town ST</div>
+              <p class="bike-card__desc">
+                An open frame for an upright riding position as the most comfortable ride in town.
+              </p>
+              <div class="bike-card__price">$ 2 590</div>
+            </div>
+
+            <div class="bike-card">
+              <img
+                src="https://images.unsplash.com/photo-1571188654248-7a89213915f7?w=600&q=80&auto=format&fit=crop"
+                alt="Agile ride 3"
+                class="bike-card__img"
+              />
+              <div class="bike-card__name">Agile ride 3</div>
+              <p class="bike-card__desc">
+                The lightweight frame that has earned its street tread as a sleek, agile ride.
+              </p>
+              <div class="bike-card__price">$ 2 090</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DETAILS -->
+      <section class="section" id="details">
+        <div class="container">
+          <p class="section-label">Technology</p>
+          <h2 class="section-title">The Details</h2>
+
+          <div class="detail-block">
+            <div class="detail-block__images">
+              <img
+                src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?w=600&q=80&auto=format&fit=crop"
+                alt="Auto unlock"
+                class="detail-block__img"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=600&q=80&auto=format&fit=crop"
+                alt="Handlebar"
+                class="detail-block__img"
+              />
+            </div>
+            <div class="detail-block__content">
+              <p class="section-label">Feature 01</p>
+              <h3 class="detail-block__name">Auto Unlock</h3>
+              <p class="detail-block__desc">
+                The app senses when you're nearby to unlock automatically. GPS tracking so you know where your bike is and can track it anytime.
+              </p>
+            </div>
+          </div>
+
+          <div class="detail-block detail-block--reverse">
+            <div class="detail-block__images">
+              <img
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop"
+                alt="Lights"
+                class="detail-block__img"
+              />
+              <img
+                src="https://picsum.photos/seed/battery/600/600"
+                alt="Battery"
+                class="detail-block__img"
+              />
+            </div>
+            <div class="detail-block__content">
+              <p class="section-label">Feature 02</p>
+              <h3 class="detail-block__name">Range &amp; Integrated Lights</h3>
+              <p class="detail-block__desc">
+                The removable battery has up to 70km autonomy and weighs only 2.4 kg. Lights integrated into the frame give you always-on visibility day and night.
+              </p>
+            </div>
+          </div>
+
+          <div class="detail-block">
+            <div class="detail-block__images">
+              <img
+                src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?w=600&q=80&auto=format&fit=crop"
+                alt="Disc brakes"
+                class="detail-block__img"
+              />
+              <img
+                src="https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?w=600&q=80&auto=format&fit=crop"
+                alt="Wheel"
+                class="detail-block__img"
+              />
+            </div>
+            <div class="detail-block__content">
+              <p class="section-label">Feature 03</p>
+              <h3 class="detail-block__name">Hydraulic Disc Brakes &amp; Lightweight</h3>
+              <p class="detail-block__desc">
+                Brakes with total stopping power the second you make contact. The removable battery lasts up to 70km and weighs only 2.4 kg. Lights integrated keep you visible day and night.
+              </p>
+            </div>
+          </div>
+
+          <div class="details__cta">
+            <button class="explore-btn">Explore</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section section--dark" id="contact">
+        <div class="container">
+          <p class="section-label">Get in touch</p>
+          <h2 class="section-title">Contact us</h2>
+
+          <div class="contact__grid">
+            <form class="form" id="contactForm">
+              <input type="text" placeholder="Name" class="form__input" required />
+              <input type="email" placeholder="Email" class="form__input" required />
+              <textarea placeholder="Message" class="form__textarea" required></textarea>
+              <button type="submit" class="form__button">Send</button>
+            </form>
+
+            <div class="contact__info">
+              <div class="contact__info-group">
+                <p class="contact__info-label">Phone</p>
+                <a href="tel:+12345555555" class="contact__info-value">+1 234 5555-55-55</a>
+              </div>
+              <div class="contact__info-group">
+                <p class="contact__info-label">Email</p>
+                <a href="mailto:hello@miami.com" class="contact__info-value">hello@miami.com</a>
+              </div>
+              <div class="contact__info-group">
+                <p class="contact__info-label">Address</p>
+                <span class="contact__info-value">
+                  400 First Ave.<br />
+                  Suite 700<br />
+                  Minneapolis, MN 55401
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER PHOTO -->
+    <div class="footer-photo">
+      <img
+        src="https://images.unsplash.com/photo-1502744688674-c619d1586c9e?w=1600&q=80&auto=format&fit=crop"
+        alt="Cyclists"
+      />
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__inner">
+        <span class="footer__logo">MyBiKE</span>
+        <span class="footer__copy">© 2026 MyBiKE. All rights reserved.</span>
+      </div>
+    </footer>
+  </body>
+</html>
