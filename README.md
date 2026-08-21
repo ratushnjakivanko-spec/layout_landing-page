@@ -1,28 +1,31 @@
-# Nice Gadgets — Product Catalog
+# MYBIKE Landing Page
 
-An online store for phones, tablets, and accessories built with React and TypeScript. Browse the catalog, filter and sort products, view detailed product pages with color and capacity variants, and manage a cart and favorites list.
+A responsive landing page built from scratch using semantic HTML and SCSS (BEM methodology), based on the **MYBIKE** design.
 
 ## Live Preview
 
-[https://ratushnjakivanko-spec.github.io/react_phone-catalog/](https://ratushnjakivanko-spec.github.io/react_phone-catalog/)
+[https://ratushnjakivanko-spec.github.io/layout_landing-page/](https://ratushnjakivanko-spec.github.io/layout_landing-page/)
 
 > ⚠️ Make sure the link above works in incognito mode before submitting.
 
+## Design Reference
+
+[MYBIKE landing — Figma](https://www.figma.com/file/NZQAIydtHo5QkINyGLHNcq/BIKE-New-Version?node-id=0%3A1)
+
 ## Technologies Used
 
-- React
-- TypeScript
-- React Router
-- Vite
-- SCSS (CSS Modules)
+- HTML5
+- SCSS (BEM methodology)
+- JavaScript (vanilla)
+- ESLint / Stylelint
 
 ## Getting Started
 
 1. Clone the repository:
 
 ```
-git clone https://github.com/ratushnjakivanko-spec/react_phone-catalog.git
-cd react_phone-catalog
+git clone https://github.com/ratushnjakivanko-spec/layout_landing-page.git
+cd layout_landing-page
 ```
 
 2. Install dependencies:
@@ -39,8 +42,6 @@ npm start
 
 ## Features
 
-- Product catalog for phones, tablets, and accessories with sorting and pagination
-- Detailed product page with color/capacity variants and related products
-- Cart and favorites, persisted in local storage
-- Light/dark theme toggle
-- Fully responsive layout
+- Fully responsive layout adapted for desktop, tablet, and mobile screens
+- Structured with the BEM naming convention for maintainable styles
+- Built block by block following the MYBIKE design reference
